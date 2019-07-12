@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit Profile Resdec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/semantic.css" />
+    <link rel="stylesheet" type="text/css" href="./css/site.css" />
+    <link rel="stylesheet" type="text/css" href="./css/flexslider.css" />
+
+
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./css/semantic.js"></script>
+
+    <script>
+        if (sessionStorage.getItem("UserLoginResdec") == null) {
+            self.location = "./";
+        }
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+    <div class="ui text container" style="max-width: 400px; padding-top: 25px;">
+        <img class="ui small image" src="./images/resdec_t.png" alt="">
+        <div class="ui segment">
+            <div class="ui basic segment">
+                <div>
+                    <span id="rmamager"><a href="./manager.html">return manager &#8594;</a></span>
+                </div>
+                <div id="avatar-div">
+                    <div class="ui items">
+                        <div class="item">
+                            <div id="img_user" class="ui tiny circular image">
+                                <img src="">
+                            </div>
+                            <div class="content">
+                                <a id="name_user" class="header"></a>
+                                <div class="meta">
+                                    <!--<span>Milagro, Ecuador</span>-->
+                                </div>
+                                <div class="description">
+                                    <a href="./editpic.html" class="ui small labeled icon button">
+                                        <i class="camera icon"></i> Change profile photo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Edit Profile</h2>
+                <div class="ui basic segment">
+
+                    <form id="form_editprofile" class="ui form" action="javascript:;" onsubmit="save(this)">
+                        <div class="field">
+                            <label>Name</label>
+                            <input id="name" type="text" placeholder="Name" required>
+                        </div>
+                        <div class="field">
+                            <label>Last Name</label>
+                            <input id="last_name" type="text" placeholder="Last Name" required>
+                        </div>
+                        <div class="field">
+                            <label>Email</label>
+                            <input id="email" type="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="field">
+                            <!--<label>Password</label>
+                            <input id="pswd" type="password" placeholder="Password">-->
+                            <p>
+                                <a href="./editpwsd.html">Change Password</a>
+                            </p>
+                        </div>
+
+                        <button type="submit" class="negative ui button">
+                            SAVE
+                            <i class="angle right icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="./js/editprofile.js"></script>
+<script src="./js/site.js"></script>
+
+
+
+</html>

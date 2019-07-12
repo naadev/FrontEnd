@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resdec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/semantic.css" />
+    <link rel="stylesheet" type="text/css" href="./css/site.css" />
+    <link rel="stylesheet" type="text/css" href="./css/flexslider.css" />
+
+
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./css/semantic.js"></script>
+    <script src="./js/jquery.flexslider.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+
+            $(document).ready(function() {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    animationLoop: true,
+                    itemMargin: 5
+                });
+            });
+
+
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+    <div class="ui sidebar vertical menu">
+        <a class="item" href="#">
+            <div class="header">
+                <img class="ui middle aligned samll image" src="./images/resdec.jpg" title="logo_site">
+            </div>
+        </a>
+        <a class="item" href="./index.html">HOME</a>
+        <a class="item" href="./about.html">ABOUT US</a>
+        <a class="item" href="./tools.html">RESDEC TOOL</a>
+        <a class="item" href="./download.html">DOWNLOAD</a>
+        <a class="item" href="./contact.html">CONTACT US</a>
+    </div>
+
+    <div class="pusher">
+
+
+
+
+        <div class="ui container" style="padding-bottom: 30px;">
+            <div id="menuhide" class="ui five item text large menu">
+                <div class="item">
+                    <i id="myMenuSlide" class="large bars icon"></i>
+                </div>
+            </div>
+
+            <div id="logo_mobile" class="item">
+                <img class="ui small image" src="./images/resdec_t.png" title="logo_site">
+            </div>
+
+
+            <div id="menuroot" class="ui six item text large menu">
+                <div class="item">
+                    <img class="ui image" src="./images/resdec_t.png" alt="">
+                </div>
+                <a id="home" class="item" data-path="index.html" href="./index.html">HOME</a>
+                <a class="item" data-path="about" href="./about.html">ABOUT US</a>
+                <a class="item" data-path="tools" href="./tools.html">RESDEC TOOL</a>
+                <a class="item" data-path="download" href="./download.html">DOWNLOAD</a>
+                <a class="item" data-path="contact" href="./contact.html">CONTACT US</a>
+            </div>
+
+            <div style="padding-bottom: 25px; text-align: right;">
+                <a href="./login.html" class="negative ui button">
+                    <i class="user icon"></i> LOG IN
+                    <i class="angle right icon"></i>
+                </a>
+            </div>
+
+            <div style="width: 100%;">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="./images/r1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/r2.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/website_resdec-3.1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/r4.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./images/r5.png" alt="">
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div style="padding-bottom: 25px;">
+
+
+                <div class="ui two column stackable grid">
+                    <div class="column" style="text-align:center; min-height:360px">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9egr_i7e1Ak?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="column" style="text-align:justify;">
+                        We introduce a component-based recommender system tool called <b>RESDEC</b> focus on how to determine the influence of component selections on configurations. RESDEC aims to take advantage from a repository of information generated
+                        by users on the implementation components to efficiently search for appropriate components to implement features in a specific context. Some advantages:
+                        <ol>
+                            <li>Information about implementation components and ratings, used to build recommendations. </li>
+                            <li>It is easy to adapt to any application environment of an SPL.</li>
+                            <li>It provides a set of recommendation algorithms that can be extended and adapted in any product configuration scenario. </li>
+                            <li>It provides several data sources, being these CSV's, database, among others. </li>
+                            <li>It offers a search history of the last implementation components that the stakeholder has been interested in.</li>
+                        </ol>
+                        Discover <b>RESDEC</b>!
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--<div class="myfooter2" style="position: fixed; bottom: 0;">
+            fghdfghdfg
+        </div>-->
+
+        <div class="myfooter2">
+            <div class="ui grid" style="margin-bottom: 0px;margin-top: 0px;margin-left: 0px;margin-right: 0px;">
+                <div class="left floated six wide column" style="padding: 0;">
+                    <div class="ui vertical basic segment" style="padding: 0;">
+                        <br>
+                        <span>Copyright 2018 - All rights reserved</span>
+                    </div>
+                </div>
+                <div class="right floated six wide column" style="padding: 0;">
+                    <div class="ui basic right aligned segment" style="padding: 0;">
+                        <img src="./images/logoUni.jpg" class="ui small right floated image" alt="" usemap="#imgmap">
+                        <map name="imgmap">
+                            <area rel="noopener noreferrer" target="_blank" alt="Unemi" title="Unemi" href="http://www.unemi.edu.ec/" coords="3,79,111,0" shape="rect">
+                            <area rel="noopener noreferrer" target="_blank" alt="Sevilla" title="Sevilla" href="http://www.us.es" coords="199,81,114,0" shape="rect">
+                        </map>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="./js/site.js"></script>
+
+
+
+</html>

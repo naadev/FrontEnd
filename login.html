@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login Resdec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/semantic.css" />
+    <link rel="stylesheet" type="text/css" href="./css/site.css" />
+    <link rel="stylesheet" type="text/css" href="./css/flexslider.css" />
+
+
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./css/semantic.js"></script>
+    <script src="./js/jquery.flexslider.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="ui text container" style="width: 320px; padding-top: 25px;">
+        <div class="ui segment">
+            <div class="ui basic segment">
+                <form class="ui form" action="javascript:;" onsubmit="link(this)">
+                    <div class="field">
+                        <a href="./" style="color: #666666">
+                            <i class="arrow left icon"></i> Back
+                        </a>
+                    </div>
+                    <div class="field">
+                        <div style="text-align: center">
+                            <img class="ui image" src="images/resdec.jpg" alt="">
+                            <h3>Login</h3>
+                            <span id="error_login"></span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>User</label>
+                        <input id="idUser" type="text" maxlength="20" name="email" autocomplete="off" placeholder="user id" required>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <input id="psswd" type="password" maxlength="25" name="psswd" autocomplete="off" placeholder="Password" required>
+                    </div>
+                    <div class="ui field">
+                        <div style="text-align: right;">
+                            <a href="">have your forgotten your password?</a>
+                        </div>
+                    </div>
+                    <div class="ui field">
+                        <div style="text-align: center">
+                            <button id="btn" class="negative ui button" type="submit">ENTER</button>
+                            <div class="ui divider"></div>
+                            <button class="ui button" type="submit" disabled>CREATE AN ACCOUNT</button>
+                            <div style="padding-top: 35px; font-size: 11px;">
+                                Copyright 2018 - All rights reserved
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+    var btn = document.getElementById("btn");
+
+    function link() {
+        document.getElementById('error_login').innerHTML = "";
+        var psw = document.getElementById("psswd").value;
+        var email = document.getElementById("idUser").value;
+
+        var url = `http://190.15.128.131:8030/resdec/login/?username=${email}&password=${psw}`;
+        $.ajax({
+            url: url,
+            success: function(response) {
+
+                if (response.login) {
+                    sessionStorage.setItem("UserLoginResdec", email);
+                    console.log(response.login);
+                    window.location = "./manager.html";
+                } else {
+                    console.log(response.err_msg);
+                    document.getElementById('error_login').innerHTML = response.err_msg;
+                }
+            },
+            error: function(e) {
+                console.log('error: ' + e);
+            },
+            statusCode: {
+                404: function(ft) {
+                    console.log('error 404: ' + ft);
+                }
+            }
+        });
+
+    }
+    //btn.addEventListener("click", link);
+</script>
+
+<script src="./js/site.js"></script>
+
+</html>
